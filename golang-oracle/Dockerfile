@@ -1,4 +1,4 @@
-FROM golang:1.13
+FROM golang:1.16
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -6,10 +6,6 @@ RUN apt-get update && \
     imagemagick zip unzip \
     locales \
     && rm -rf /var/lib/apt/lists/*
-
-# Golang deps
-RUN go get github.com/golang/dep/cmd/dep
-RUN go get github.com/2tvenom/go-test-teamcity
 
 # Oracle
 ENV ORACLE_HOME=/opt/oracle/instantclient_12_2
