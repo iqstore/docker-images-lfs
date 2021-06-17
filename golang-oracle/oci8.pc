@@ -1,0 +1,9 @@
+prefix=/opt/oracle/instantclient_12_2
+libdir=${prefix}
+includedir=${prefix}/sdk/include
+
+Name: OCI
+Description: Oracle database driver
+Version: 12.2
+Libs: -L${libdir} -lclntsh
+Cflags: -I${includedir}
